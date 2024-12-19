@@ -12,7 +12,7 @@ export default function Home() {
         <div className="w-full grid grid-rows-[64px_1fr_8px] lg:border border-white/20 h-full min-h-dvh lg:max-w-5xl mx-auto lg:min-h-[640px] rounded-2xl px-4">
           <header className="border-b border-white/20">
             <div className="py-4 px-2 flex items-center justify-between">
-              <a href="https://console.groq.io" target="_blank">
+              <a href="https://groq.com" target="_blank">
                 <Image
                   width={122.667}
                   height={64}
