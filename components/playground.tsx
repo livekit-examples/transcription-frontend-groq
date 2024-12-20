@@ -48,7 +48,7 @@ export function Playground({ onConnect }: PlaygroundProps) {
     const isActive = !isLoading && roomState !== ConnectionState.Disconnected;
 
     const conversationToolbar = (
-      <div className="fixed z-50 w-full md:absolute left-1/2 bottom-4 md:bottom-auto md:top-1/2 -translate-y-1/2 -translate-x-1/2">
+      <div className="w-full absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
         <motion.div
           className="flex justify-between gap-3 px-2"
           initial={{ opacity: 0, y: 25 }}
@@ -90,7 +90,7 @@ export function Playground({ onConnect }: PlaygroundProps) {
     );
 
     const startConversationButton = (
-      <div className="fixed bottom-2 md:bottom-auto md:absolute md:top-1/2 -translate-y-1/2 md:w-auto text-center">
+      <div className="absolute top-1/2 -translate-y-1/2">
         <motion.div
           className="flex gap-3"
           initial={{ opacity: 0, y: 10 }}
@@ -105,8 +105,9 @@ export function Playground({ onConnect }: PlaygroundProps) {
           <Button
             state="primary"
             size="large"
-            className={`relative w-full text-base text-black ${isLoading ? "pointer-events-none" : ""
-              }`}
+            className={`relative w-full text-base text-black ${
+              isLoading ? "pointer-events-none" : ""
+            }`}
             onClick={() =>
               onConnect(roomState === ConnectionState.Disconnected)
             }
@@ -117,8 +118,9 @@ export function Playground({ onConnect }: PlaygroundProps) {
               Start voice transcription
             </div>
             <div
-              className={`absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 ${isLoading ? "opacity-100" : "opacity-0"
-                }`}
+              className={`absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 ${
+                isLoading ? "opacity-100" : "opacity-0"
+              }`}
             >
               <LoadingSVG diameter={16} strokeWidth={3} />
             </div>
@@ -145,7 +147,7 @@ export function Playground({ onConnect }: PlaygroundProps) {
 
   return (
     <>
-      <div className="relative flex-col grow basis-1/2 gap-4 h-full md:flex w-full">
+      <div className="relative flex-col grow basis-1/2 gap-4 h-full w-full">
         <Typewriter typingSpeed={25} />
         <div className="absolute left-0 bottom-0 w-full bg-groq-accent-bg border-t border-white/20 pt-2">
           {audioTileContent}
