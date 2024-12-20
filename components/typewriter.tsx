@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useMemo, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { ConnectionState } from "livekit-client";
 import { useTranscriber } from "@/hooks/use-transcriber";
 
@@ -18,10 +18,14 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
   const [displayedText, setDisplayedText] = useState<string>("");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const text = Object.values(transcriptions)
-    .toSorted((a, b) => a.firstReceivedTime - b.firstReceivedTime)
-    .map((t) => t.text)
-    .join("\n");
+  const transcriptionEndRef = useRef<HTMLDivElement>(null);
+  const text = useMemo(() =>
+    Object.values(transcriptions)
+      .toSorted((a, b) => a.lastReceivedTime - b.lastReceivedTime)
+      .map((t) => t.text.trim())
+      .join("\n"),
+    [transcriptions],
+  );
 
   useEffect(() => {
     if (text.length === 0) {
@@ -37,6 +41,7 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
+        transcriptionEndRef.current?.scrollIntoView({ behavior: "smooth" });
       }, typingSpeed);
       return () => clearTimeout(timeout);
     } else {
@@ -67,7 +72,7 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
   }, []);
 
   return (
-    <div className="h-full text-lg font-mono pl-3 relative">
+    <div className="relative h-full text-lg font-mono pl-3 relative">
       <div className="pointer-events-none h-1/4 absolute top-0 left-0 w-full bg-gradient-to-b from-groq-accent-bg to-transparent"></div>
       {state === ConnectionState.Disconnected && (
         <div className="text-white/40 h-full items-center pb-16 max-w-md flex">
@@ -75,25 +80,22 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
         </div>
       )}
       {state !== ConnectionState.Disconnected && (
-        <div className="h-1/2 overflow-hidden max-w-md flex items-end">
-          <p>
+        <div className="h-full overflow-y-auto">
+          <div className="h-48" />
+          <motion.p
+            className="mr-2 whitespace-pre-wrap"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            {displayedText}{" "}
             <motion.span
-              className="mr-2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
-              {displayedText}
-            </motion.span>
-            <AnimatePresence>
-              <motion.span
-                key={isTyping ? "animate" : "static"}
-                animate={!isTyping && { opacity: [1, 0, 1] }}
-                transition={{ duration: 0.5, delay: 0.2, repeat: Infinity }}
-                className="relative inline-block w-3 h-3 rounded-full bg-white"
-              />
-            </AnimatePresence>
-          </p>
+              animate={!isTyping && { opacity: [1, 0, 1] }}
+              transition={{ duration: 0.5, delay: 0.2, repeat: Infinity }}
+              className="relative inline-block w-3 h-3 rounded-full bg-white"
+            />
+          </motion.p>
+          <div ref={transcriptionEndRef} className="h-1/2" />
         </div>
       )}
     </div>

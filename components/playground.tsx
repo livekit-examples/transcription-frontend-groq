@@ -105,9 +105,8 @@ export function Playground({ onConnect }: PlaygroundProps) {
           <Button
             state="primary"
             size="large"
-            className={`relative w-full text-base text-black ${
-              isLoading ? "pointer-events-none" : ""
-            }`}
+            className={`relative w-full text-base text-black ${isLoading ? "pointer-events-none" : ""
+              }`}
             onClick={() =>
               onConnect(roomState === ConnectionState.Disconnected)
             }
@@ -118,9 +117,8 @@ export function Playground({ onConnect }: PlaygroundProps) {
               Start voice transcription
             </div>
             <div
-              className={`absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 ${
-                isLoading ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 ${isLoading ? "opacity-100" : "opacity-0"
+                }`}
             >
               <LoadingSVG diameter={16} strokeWidth={3} />
             </div>
@@ -131,7 +129,7 @@ export function Playground({ onConnect }: PlaygroundProps) {
 
     const visualizerContent = (
       <div className="flex flex-col justify-space-between h-full w-full">
-        <div className="min-h-12 w-full relative">
+        <div className="min-h-12 h-12 w-full relative">
           <AnimatePresence>
             {!isActive ? startConversationButton : null}
           </AnimatePresence>
@@ -147,12 +145,10 @@ export function Playground({ onConnect }: PlaygroundProps) {
 
   return (
     <>
-      <div className="flex grow w-full">
-        <div className="relative flex-col grow basis-1/2 gap-4 h-full md:flex">
-          <Typewriter typingSpeed={25} />
-          <div className="absolute left-0 bottom-0 w-full border-t border-white/20 pt-2">
-            {audioTileContent}
-          </div>
+      <div className="relative flex-col grow basis-1/2 gap-4 h-full md:flex w-full">
+        <Typewriter typingSpeed={25} />
+        <div className="absolute left-0 bottom-0 w-full bg-groq-accent-bg border-t border-white/20 pt-2">
+          {audioTileContent}
         </div>
       </div>
     </>

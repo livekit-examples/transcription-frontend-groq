@@ -50,7 +50,7 @@ export function RoomComponent() {
 
   return (
     <LiveKitRoom
-      className="flex flex-col h-full w-full"
+      className="overflow-y-hidden w-full"
       serverUrl={wsUrl}
       token={token}
       room={room}
