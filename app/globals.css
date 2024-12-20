@@ -5,6 +5,9 @@
 :root {
   --background: rgb(245, 80, 54);
   --foreground: #ffffff;
+
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  scrollbar-width: thin;
 }
 
 body {

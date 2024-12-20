@@ -72,7 +72,7 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
   }, []);
 
   return (
-    <div className="relative h-full text-lg font-mono pl-3 relative">
+    <div className="relative h-full text-lg font-mono pl-3 relative pt-2 pb-16">
       <div className="pointer-events-none h-1/4 absolute top-0 left-0 w-full bg-gradient-to-b from-groq-accent-bg to-transparent"></div>
       {state === ConnectionState.Disconnected && (
         <div className="text-white/40 h-full items-center pb-16 max-w-md flex">
