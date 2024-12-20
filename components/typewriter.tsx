@@ -21,7 +21,7 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
   const transcriptionEndRef = useRef<HTMLDivElement>(null);
   const text = useMemo(() =>
     Object.values(transcriptions)
-      .toSorted((a, b) => a.lastReceivedTime - b.lastReceivedTime)
+      .toSorted((a, b) => a.firstReceivedTime - b.firstReceivedTime)
       .map((t) => t.text.trim())
       .join("\n"),
     [transcriptions],
@@ -39,7 +39,7 @@ export function Typewriter({ typingSpeed = 50 }: TypewriterProps) {
         setIsTyping(true);
       }
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[currentIndex]);
+        setDisplayedText(text.slice(0, currentIndex) + text[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
         transcriptionEndRef.current?.scrollIntoView({ behavior: "smooth" });
       }, typingSpeed);
