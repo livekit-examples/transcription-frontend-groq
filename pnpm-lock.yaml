@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@livekit/components-react':
         specifier: ^2.6.10
-        version: 2.6.11(@livekit/krisp-noise-filter@0.2.13(livekit-client@2.7.5))(livekit-client@2.7.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tslib@2.8.1)
+        version: 2.6.11(@livekit/krisp-noise-filter@0.2.14(livekit-client@2.7.5))(livekit-client@2.7.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tslib@2.8.1)
       '@livekit/krisp-noise-filter':
         specifier: ^0.2.13
-        version: 0.2.13(livekit-client@2.7.5)
+        version: 0.2.14(livekit-client@2.7.5)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -298,8 +298,8 @@ packages:
       '@livekit/krisp-noise-filter':
         optional: true
 
-  '@livekit/krisp-noise-filter@0.2.13':
-    resolution: {integrity: sha512-41+NgOIoKsbcIG60f1Hyj4m3zPHIiq7R8HV4pfCUSgr/hnshDIbV0d53Dy/2xqBnXEPCoIbTvFRb8vBllEmYCQ==}
+  '@livekit/krisp-noise-filter@0.2.14':
+    resolution: {integrity: sha512-Iy7o5Iy+7nx4jgwOuS1rAUfCW1w/plG8xDRRi6VzSt9Fcfe4qw890JCyfhZbnsUdxj/bQ+TF3IjidlX94FN8mg==}
     peerDependencies:
       livekit-client: ^2.0.8
 
@@ -2028,7 +2028,7 @@ snapshots:
       rxjs: 7.8.1
       tslib: 2.8.1
 
-  '@livekit/components-react@2.6.11(@livekit/krisp-noise-filter@0.2.13(livekit-client@2.7.5))(livekit-client@2.7.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tslib@2.8.1)':
+  '@livekit/components-react@2.6.11(@livekit/krisp-noise-filter@0.2.14(livekit-client@2.7.5))(livekit-client@2.7.5)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tslib@2.8.1)':
     dependencies:
       '@livekit/components-core': 0.11.11(livekit-client@2.7.5)(tslib@2.8.1)
       clsx: 2.1.1
@@ -2038,9 +2038,9 @@ snapshots:
       tslib: 2.8.1
       usehooks-ts: 3.1.0(react@19.0.0)
     optionalDependencies:
-      '@livekit/krisp-noise-filter': 0.2.13(livekit-client@2.7.5)
+      '@livekit/krisp-noise-filter': 0.2.14(livekit-client@2.7.5)
 
-  '@livekit/krisp-noise-filter@0.2.13(livekit-client@2.7.5)':
+  '@livekit/krisp-noise-filter@0.2.14(livekit-client@2.7.5)':
     dependencies:
       livekit-client: 2.7.5
 
