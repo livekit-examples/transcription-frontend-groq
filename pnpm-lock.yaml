@@ -28,7 +28,7 @@ importers:
         version: 2.7.5
       livekit-server-sdk:
         specifier: ^2.9.3
-        version: 2.9.5
+        version: 2.9.6
       lucide-react:
         specifier: ^0.469.0
         version: 0.469.0(react@19.0.0)
@@ -1230,8 +1230,8 @@ packages:
   livekit-client@2.7.5:
     resolution: {integrity: sha512-sPhHYwXvG75y1LDC50dDC9k6Z49L2vc/HcMRhzhi7yBca6ofPEebpB0bmPOry4ovrnFA+a8TL1pFR2mko1/clw==}
 
-  livekit-server-sdk@2.9.5:
-    resolution: {integrity: sha512-vx93zG9r0EdAbeK3/+XuoO6w2lHeOOo1RRgL49ZGT2gihLtWQlYP6YFcVNr2ere9NtYT0mfLoGQtDcktXKdYOQ==}
+  livekit-server-sdk@2.9.6:
+    resolution: {integrity: sha512-uNTkxrL6CecipH/+ctbWx5LG3Pjocp0Clytekxv7Ey13Vj2w4W+UC3zIKgpa37cpE0NOfmi/uaigx+vZ5rKSiw==}
     engines: {node: '>=18'}
 
   locate-path@6.0.0:
@@ -3149,8 +3149,9 @@ snapshots:
       typed-emitter: 2.1.0
       webrtc-adapter: 9.0.1
 
-  livekit-server-sdk@2.9.5:
+  livekit-server-sdk@2.9.6:
     dependencies:
+      '@bufbuild/protobuf': 1.10.0
       '@livekit/protocol': 1.30.0
       camelcase-keys: 9.1.3
       jose: 5.9.6
