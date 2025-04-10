@@ -28,7 +28,7 @@ importers:
         version: 2.10.0
       livekit-server-sdk:
         specifier: ^2.9.3
-        version: 2.11.0
+        version: 2.12.0
       lucide-react:
         specifier: ^0.487.0
         version: 0.487.0(react@19.1.0)
@@ -1240,8 +1240,8 @@ packages:
   livekit-client@2.10.0:
     resolution: {integrity: sha512-JASed3gLyr6Ros4lSFpRQSYPlxSjX0Pv/rSmHb3mxo+iqYOW5bPSdkM5wPbV8R+Te5gKu0xAO5ObyWgRdAHTdw==}
 
-  livekit-server-sdk@2.11.0:
-    resolution: {integrity: sha512-SmUkVHwO9lYUstsJgt3rw9aC4E3dFBfreTLGXqxEWWegjaqcVDxropfYX57Tfs8eRiawd8ndk+AavF5QJGiWpg==}
+  livekit-server-sdk@2.12.0:
+    resolution: {integrity: sha512-6i2l0Ja1yhYvCXqU9wZ3SlWPEm1pYXpSJbpmT3sN0UWS61+jF6qkVY4AeSRQ53w5zrgzLBIyDwooBEMxz7XyMw==}
     engines: {node: '>=18'}
 
   locate-path@6.0.0:
@@ -1762,8 +1762,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.38.0:
-    resolution: {integrity: sha512-2dBz5D5ycHIoliLYLi0Q2V7KRaDlH0uWIvmk7TYlAg5slqwiPv1ezJdZm1QEM0xgk29oYWMCbIG7E6gHpvChlg==}
+  type-fest@4.39.1:
+    resolution: {integrity: sha512-uW9qzd66uyHYxwyVBYiwS4Oi0qZyUqwjU+Oevr6ZogYiXt99EOYtwvzMSLw1c3lYo2HzJsep/NB23iEVEgjG/w==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -2381,7 +2381,7 @@ snapshots:
       camelcase: 8.0.0
       map-obj: 5.0.0
       quick-lru: 6.1.2
-      type-fest: 4.38.0
+      type-fest: 4.39.1
 
   camelcase@8.0.0: {}
 
@@ -3168,7 +3168,7 @@ snapshots:
       typed-emitter: 2.1.0
       webrtc-adapter: 9.0.1
 
-  livekit-server-sdk@2.11.0:
+  livekit-server-sdk@2.12.0:
     dependencies:
       '@bufbuild/protobuf': 1.10.0
       '@livekit/protocol': 1.36.1
@@ -3745,7 +3745,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.38.0: {}
+  type-fest@4.39.1: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
