@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@livekit/components-react':
         specifier: ^2.6.10
-        version: 2.9.4(@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.0))(livekit-client@2.13.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tslib@2.8.1)
+        version: 2.9.4(@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.1))(livekit-client@2.13.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tslib@2.8.1)
       '@livekit/krisp-noise-filter':
         specifier: ^0.3.0
-        version: 0.3.0(livekit-client@2.13.0)
+        version: 0.3.0(livekit-client@2.13.1)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -25,7 +25,7 @@ importers:
         version: 11.18.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       livekit-client:
         specifier: ^2.7.5
-        version: 2.13.0
+        version: 2.13.1
       livekit-server-sdk:
         specifier: ^2.9.3
         version: 2.13.0
@@ -50,7 +50,7 @@ importers:
         version: 3.3.1
       '@types/node':
         specifier: ^22.0.0
-        version: 22.15.19
+        version: 22.15.21
       '@types/react':
         specifier: ^19
         version: 19.1.4
@@ -416,8 +416,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@22.15.19':
-    resolution: {integrity: sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==}
+  '@types/node@22.15.21':
+    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
   '@types/react-dom@19.1.5':
     resolution: {integrity: sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==}
@@ -1249,8 +1249,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  livekit-client@2.13.0:
-    resolution: {integrity: sha512-Q2FAQbJt0zFBdOHIom1YRfsIYIdTC2dxJfus084w4ni4ZHwNYZ9GZQcp9zpuxFg1O36fTobLCn3B1JCSY834nw==}
+  livekit-client@2.13.1:
+    resolution: {integrity: sha512-uTT4pKSd9TTeHEp+fx1A7a7ZkVTR+rUvy7ZvIIoZa6sZ0vynC6dea26LBHDYwcQstmnI776ibWe2FZDjvoSU0A==}
 
   livekit-server-sdk@2.13.0:
     resolution: {integrity: sha512-fQJI/zEJRPeXKdKMkEfJNYSSnvmuPQsk2Q+X6tPfUrJPy7fnyYPax/icf/CZ8EYZQBhFgSD7WaKOYGSSfGSyZw==}
@@ -2047,30 +2047,30 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@livekit/components-core@0.12.5(livekit-client@2.13.0)(tslib@2.8.1)':
+  '@livekit/components-core@0.12.5(livekit-client@2.13.1)(tslib@2.8.1)':
     dependencies:
       '@floating-ui/dom': 1.6.13
-      livekit-client: 2.13.0
+      livekit-client: 2.13.1
       loglevel: 1.9.1
       rxjs: 7.8.2
       tslib: 2.8.1
 
-  '@livekit/components-react@2.9.4(@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.0))(livekit-client@2.13.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tslib@2.8.1)':
+  '@livekit/components-react@2.9.4(@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.1))(livekit-client@2.13.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tslib@2.8.1)':
     dependencies:
-      '@livekit/components-core': 0.12.5(livekit-client@2.13.0)(tslib@2.8.1)
+      '@livekit/components-core': 0.12.5(livekit-client@2.13.1)(tslib@2.8.1)
       clsx: 2.1.1
-      livekit-client: 2.13.0
+      livekit-client: 2.13.1
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       tslib: 2.8.1
       usehooks-ts: 3.1.1(react@19.1.0)
     optionalDependencies:
-      '@livekit/krisp-noise-filter': 0.3.0(livekit-client@2.13.0)
+      '@livekit/krisp-noise-filter': 0.3.0(livekit-client@2.13.1)
 
-  '@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.0)':
+  '@livekit/krisp-noise-filter@0.3.0(livekit-client@2.13.1)':
     dependencies:
       '@livekit/mutex': 1.1.1
-      livekit-client: 2.13.0
+      livekit-client: 2.13.1
 
   '@livekit/mutex@1.1.1': {}
 
@@ -2141,7 +2141,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@22.15.19':
+  '@types/node@22.15.21':
     dependencies:
       undici-types: 6.21.0
 
@@ -3171,7 +3171,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  livekit-client@2.13.0:
+  livekit-client@2.13.1:
     dependencies:
       '@livekit/mutex': 1.1.1
       '@livekit/protocol': 1.38.0
