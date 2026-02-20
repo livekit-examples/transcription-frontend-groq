@@ -14,7 +14,7 @@
     "@livekit/krisp-noise-filter": "^0.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.15.0",
+    "framer-motion": "^12.0.0",
     "livekit-client": "^2.7.5",
     "livekit-server-sdk": "^2.9.3",
     "lucide-react": "^0.575.0",
