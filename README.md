@@ -1,3 +1,7 @@
+> [!WARNING]
+> This example is archived and no longer maintained.
+> For a current web frontend with live transcriptions, see [agent-starter-react](https://github.com/livekit-examples/agent-starter-react). For speech-to-text with Groq, see the [Groq STT docs](https://docs.livekit.io/agents/models/stt/groq/).
+
 <a href="https://livekit.io/">
   <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
 </a>
